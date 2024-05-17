@@ -1,0 +1,29 @@
+Blog Personal: 
+
+*Crea un sistema completo de blogging donde los usuarios puedan registrarse, crear, editar y eliminar publicaciones, comentar en las publicaciones y clasificarlas por categorías.
+
+1. Autenticación y Registro de Usuarios:
+
+*POST /api/auth/register: Permite a los usuarios registrarse proporcionando su nombre de usuario, correo electrónico y contraseña.
+*POST /api/auth/login: Permite a los usuarios iniciar sesión proporcionando su correo electrónico y contraseña.
+
+2. Gestión de Publicaciones:
+
+*GET /api/posts/: Devuelve una lista de todas las publicaciones.
+*POST /api/posts/: Permite a los usuarios autenticados crear una nueva publicación proporcionando el título, contenido y categoría.
+*GET /api/posts/{id}/: Devuelve los detalles de una publicación específica.
+*PUT /api/posts/{id}/: Permite a los usuarios autenticados editar una publicación existente proporcionando el título, contenido y categoría.
+*DELETE /api/posts/{id}/: Permite a los usuarios autenticados eliminar una publicación existente.
+
+3. Gestión de Comentarios:
+
+*GET /api/posts/{post_id}/comments/: Devuelve una lista de comentarios para una publicación específica.
+*POST /api/posts/{post_id}/comments/: Permite a los usuarios autenticados agregar un comentario a una publicación proporcionando el contenido del comentario.
+*DELETE /api/posts/{post_id}/comments/{comment_id}/: Permite a los usuarios autenticados eliminar un comentario existente en una publicación.
+
+4. Gestión de Categorías:
+
+*GET /api/categories/: Devuelve una lista de todas las categorías disponibles.
+*POST /api/categories/: Permite a los usuarios autenticados crear una nueva categoría proporcionando el nombre de la categoría.
+*PUT /api/categories/{id}/: Permite a los usuarios autenticados editar una categoría existente proporcionando el nuevo nombre de la categoría.
+*DELETE /api/categories/{id}/: Permite a los usuarios autenticados eliminar una categoría existente.
